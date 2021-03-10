@@ -14,8 +14,9 @@ namespace DataAccess.Concrete.EntityFramework
             optionsBuilder.UseSqlServer(@"Server = (localdb)\mssqllocaldb; Database = Northwind; Trusted_Connection = true");//Hangi veritabını ile ilişkilendireceğimizi belirten kod bloğu(11-13)
             //Northwind'e bağladıkTrusted_connection kısmı şifreye gerek duymadan bağlanmasını sağlar.
         }
-        public DbSet<Product> Products { get; set; }//BENDE Kİ PRODUCT'I NORTHWİNDE DEKİ PRODUCTS'LA İLİŞKİLENDİRDİ
+        public DbSet<Product> Products { get; set; }//BENDE Kİ PRODUCT CLASS'INI NORTHWİNDE DEKİ PRODUCTS'LA İLİŞKİLENDİRDİK
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }
