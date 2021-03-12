@@ -15,20 +15,30 @@ namespace ConsoleUI
             //ProductTest0();
             //ProductTest();
             // CategoryTest();
-           // ProductTest1();
+           ProductTest1();
 
         }
 
         private static void ProductTest1()
         {
             ProductManager productManager = new ProductManager(new EfProductDal());
-            foreach (var product in productManager.GetProductDetails())
+            var result = productManager.GetProductDetails();
+            if (result.Success ==true)
             {
-                Console.WriteLine(product.ProductName + "  - - -   " + product.CategoryName + " - - - " + product.UnitsInStock);//Bir tabloda datalar join edildi ve birden fazla satır ekrana getirildi.
+                foreach (var product in result.Data)
+                {
+                    Console.WriteLine(product.ProductName + "  - - -   " + product.CategoryName + " - - - " + product.UnitsInStock);//Bir tabloda datalar join edildi ve birden fazla satır ekrana getirildi.
+                    Console.WriteLine();
+                }
             }
+            else
+            {
+                Console.WriteLine(result.Message);
+            }
+            
         }
 
-        private static void ProductGetTest()
+       /* private static void ProductGetTest()
         {
             ProductManager productManager = new ProductManager(new EfProductDal());
             Console.WriteLine();
@@ -71,6 +81,6 @@ namespace ConsoleUI
             {
                 Console.WriteLine(product.ProductName);
             }
-        }
+        }*/
     }
 }
