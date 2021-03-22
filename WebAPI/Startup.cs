@@ -30,8 +30,8 @@ namespace WebAPI
             //Autofac,Nnjecct,CastleWindsor,tructureMap,LightInject,DryImject --> IoC Container
             //AOP
             services.AddControllersWithViews();
-            services.AddSingleton<IProductService,ProductManager>();//Bu kod satýrý default deðil biz yazdýk. bu satýrýn amacý,IProdcutService istendiðinde ProductManger oluþtru ve ona ver yani eðer ki IProdcutService tipinde baðýmlýlýk görürse ProductManager onun karþýlýðýdýr demektir.
-            services.AddSingleton<IProductDal, EfProductDal>();
+            //services.AddSingleton<IProductService,ProductManager>();//Bu kod satýrý default deðil biz yazdýk. bu satýrýn amacý,IProdcutService istendiðinde ProductManger oluþtru ve ona ver yani eðer ki IProdcutService tipinde baðýmlýlýk görürse ProductManager onun karþýlýðýdýr demektir.
+            //services.AddSingleton<IProductDal, EfProductDal>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
