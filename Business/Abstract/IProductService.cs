@@ -15,6 +15,7 @@ namespace Business.Abstract
         IResult Add(Product product);//Herhangi bir veritipi döndürmez
         IDataResult<List<ProductDetailDto>> GetProductDetails();//IDataResult'tan sonra ki kısım istenilen T'dir.
         IDataResult<Product> GetById(int productId); // Product Döndürür ve de IResult'ı
+        IResult Update(Product product);
 
     }
 }

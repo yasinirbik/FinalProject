@@ -15,13 +15,13 @@ namespace ConsoleUI
             //ProductTest0();
             //ProductTest();
             // CategoryTest();
-           ProductTest1();
+           //ProductTest1();
 
         }
 
         private static void ProductTest1()
         {
-            ProductManager productManager = new ProductManager(new EfProductDal());
+            ProductManager productManager = new ProductManager(new EfProductDal(),new EfCategoryDal);
             var result = productManager.GetProductDetails();
             if (result.Success ==true)
             {
